@@ -1,0 +1,10 @@
+singleton Theme 1.0 Theme.qml
+IconButton 1.0 IconButton.qml
+DataTable 1.0 DataTable.qml
+Placeholder 1.0 Placeholder.qml
+MessageBox 1.0 MessageBox.qml
+EditField 1.0 EditField.qml
+RecordForm 1.0 RecordForm.qml
+ConfirmDialog 1.0 ConfirmDialog.qml
+AddButton 1.0 AddButton.qml
+RemoveButton 1.0 RemoveButton.qml

@@ -1,0 +1,18 @@
+Altium Designer Pick and Place Locations
+D:\projects\demo\DEMO-CTRL-V1.PcbDoc
+========================================================================================================================
+File Design Information:
+
+Date:       06/11/26
+Time:       10:00
+Revision:   A
+Variant:    No variations
+Units used: mil
+
+"Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"U1","STM32G031K8U6","TopLayer","QFN32-5x5","4921.26mil","2755.91mil","0",""
+"C1","100nF","TopLayer","C0402","4744.09mil","2913.39mil","90",""
+"C2","100nF","TopLayer","C0402","5098.43mil","2598.43mil","270",""
+"R1","10K","TopLayer","R0603","4409.45mil","3149.61mil","0",""
+"R5","10K","BottomLayer","R0603","4724.41mil","2362.20mil","0",""
+"C3","1uF","TopLayer","C0603","5314.96mil","3149.61mil","180",""

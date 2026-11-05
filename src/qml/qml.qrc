@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qtquickcontrols2.conf</file>
+        <file>main.qml</file>
+        <file>MainMenuBar.qml</file>
+        <file>WorkspaceView.qml</file>
+        <file>components/qmldir</file>
+        <file>components/Theme.qml</file>
+        <file>components/IconButton.qml</file>
+        <file>components/DataTable.qml</file>
+        <file>components/Placeholder.qml</file>
+        <file>components/MessageBox.qml</file>
+        <file>components/EditField.qml</file>
+        <file>components/RecordForm.qml</file>
+        <file>components/ConfirmDialog.qml</file>
+        <file>components/AddButton.qml</file>
+        <file>components/RemoveButton.qml</file>
+        <file>dialogs/CadImportDialog.qml</file>
+        <file>panels/CameraPanel.qml</file>
+        <file>panels/MachineControlPanel.qml</file>
+        <file>panels/JogPanel.qml</file>
+        <file>panels/JogButton.qml</file>
+        <file>panels/StatusBar.qml</file>
+        <file>pages/JobPage.qml</file>
+        <file>pages/PanelPage.qml</file>
+        <file>pages/BoardsPage.qml</file>
+        <file>pages/ComponentsPage.qml</file>
+        <file>pages/PackagesPage.qml</file>
+        <file>pages/FeedersPage.qml</file>
+        <file>pages/VisionPage.qml</file>
+        <file>pages/MachineSetupPage.qml</file>
+        <file>pages/LogPage.qml</file>
+    </qresource>
+</RCC>

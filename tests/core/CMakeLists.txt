@@ -1,0 +1,5 @@
+smtpro_add_test(tst_programreader SOURCES tst_programreader.cpp LIBS smtpro_core)
+smtpro_add_test(tst_programwriter SOURCES tst_programwriter.cpp LIBS smtpro_core)
+smtpro_add_test(tst_programvalidator SOURCES tst_programvalidator.cpp testprograms.h LIBS smtpro_core)
+smtpro_add_test(tst_programedits SOURCES tst_programedits.cpp testprograms.h LIBS smtpro_core)
+smtpro_add_test(tst_cadimport SOURCES tst_cadimport.cpp LIBS smtpro_core)

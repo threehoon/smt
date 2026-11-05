@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SmtProgram formatVersion="1.0">
+  <Info name="DEMO-CTRL-V1" productCode="P-0001" revision="A" author="threehoon"
+        createdAt="2026-11-06T10:00:00+08:00" modifiedAt="2026-11-06T10:00:00+08:00">
+    <Description>示例程序：2 拼板，阻容 + 一颗 QFN</Description>
+  </Info>
+
+  <Packages>
+    <Package id="C0402" bodyLength="1.0000" bodyWidth="0.5000" height="0.3500" pinCount="2">
+      <Pick nozzle="N502" pickDepth="0.0500" vacuumCheck="true"/>
+      <Place placeDepth="0.0500" speed="100"/>
+      <Vision method="bottom" tolerance="0.0500"/>
+    </Package>
+    <Package id="R0603" bodyLength="1.6000" bodyWidth="0.8000" height="0.4500" pinCount="2">
+      <Pick nozzle="N502,N503" pickDepth="0.0500" vacuumCheck="true"/>
+      <Place placeDepth="0.0500" speed="100"/>
+      <Vision method="bottom" tolerance="0.0800"/>
+    </Package>
+    <Package id="QFN32-5x5" bodyLength="5.0000" bodyWidth="5.0000" height="0.9000" pinCount="33">
+      <Pick nozzle="N505" pickDepth="0.1000" vacuumCheck="true"/>
+      <Place placeDepth="0.1000" speed="50"/>
+      <Vision method="bottom" tolerance="0.0300"/>
+    </Package>
+  </Packages>
+
+  <Components>
+    <Component id="CC0402-100NF" package="C0402" value="100nF" description="X7R 16V"/>
+    <Component id="RC0603-10K" package="R0603" value="10K" description="1%"/>
+    <Component id="STM32G031K8U6" package="QFN32-5x5" description="MCU"/>
+  </Components>
+
+  <Boards>
+    <Board id="CTRL" width="50.0000" height="40.0000" thickness="1.6000">
+      <Fiducials>
+        <Fiducial id="FID1" x="3.0000" y="3.0000" shape="circle" size="1.0000"/>
+        <Fiducial id="FID2" x="47.0000" y="37.0000" shape="circle" size="1.0000"/>
+      </Fiducials>
+      <BadMarks>
+        <BadMark id="BM1" x="47.0000" y="3.0000"/>
+      </BadMarks>
+      <Placements>
+        <Placement id="U1" component="STM32G031K8U6" x="25.0000" y="20.0000" rotation="0.0000"/>
+        <Placement id="C1" component="CC0402-100NF" x="20.5000" y="24.0000" rotation="90.0000"/>
+        <Placement id="C2" component="CC0402-100NF" x="29.5000" y="16.0000" rotation="270.0000"/>
+        <Placement id="R1" component="RC0603-10K" x="12.0000" y="30.0000" rotation="0.0000"/>
+        <Placement id="R2" component="RC0603-10K" x="12.0000" y="27.0000" rotation="0.0000" enabled="false"/>
+        <Placement id="R5" component="RC0603-10K" x="20.0000" y="10.0000" rotation="0.0000" side="bottom"/>
+      </Placements>
+    </Board>
+  </Boards>
+
+  <Panel width="120.0000" height="50.0000">
+    <Fiducials>
+      <Fiducial id="PFID1" x="2.5000" y="2.5000" shape="circle" size="1.0000"/>
+      <Fiducial id="PFID2" x="117.5000" y="47.5000" shape="circle" size="1.0000"/>
+    </Fiducials>
+    <BoardInstances>
+      <BoardInstance id="1" board="CTRL" x="5.0000" y="5.0000" rotation="0.0000"/>
+      <BoardInstance id="2" board="CTRL" x="115.0000" y="45.0000" rotation="180.0000">
+        <Skip placement="R1"/>
+      </BoardInstance>
+    </BoardInstances>
+  </Panel>
+
+  <FeederSetup machineModel="SMT-DEMO-01">
+    <Feeder id="FD1" type="tape" slot="F1-01" component="CC0402-100NF"
+            pickX="102.0000" pickY="-35.0000" pickZ="-12.5000" rotation="90.0000">
+      <Tape width="8" pitch="2" feedCount="1"/>
+    </Feeder>
+    <Feeder id="FD2" type="tape" slot="F1-03" component="RC0603-10K"
+            pickX="118.0000" pickY="-35.0000" pickZ="-12.5000" rotation="90.0000">
+      <Tape width="8" pitch="4" feedCount="1"/>
+    </Feeder>
+    <Feeder id="FD3" type="tape" slot="F1-04" component="RC0603-10K"
+            pickX="126.0000" pickY="-35.0000" pickZ="-12.5000" rotation="90.0000" priority="-1">
+      <Tape width="8" pitch="4" feedCount="1"/>
+    </Feeder>
+    <Feeder id="FD4" type="tray" slot="T1" component="STM32G031K8U6"
+            pickX="300.0000" pickY="50.0000" pickZ="-11.0000" rotation="0.0000">
+      <Tray rows="5" columns="10" rowPitch="12.0000" columnPitch="12.0000" startIndex="0"/>
+    </Feeder>
+  </FeederSetup>
+
+  <Extensions>
+    <Extension name="com.smtpro.editor" version="1">
+      <View zoom="2.0" centerX="60.0" centerY="25.0"/>
+    </Extension>
+  </Extensions>
+</SmtProgram>

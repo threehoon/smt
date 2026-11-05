@@ -1,0 +1,6 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+U1,STM32G031K8U6,QFN32-5x5,25mm,20mm,0,T
+C1,100nF,C0402,20.5mm,24mm,90,T
+C2,100nF,C0402,29.5mm,16mm,270,T
+R1,10K,R0603,12mm,30mm,0,T
+R5,10K,R0603,20mm,10mm,0,B

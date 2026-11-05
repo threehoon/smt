@@ -1,0 +1,33 @@
+#pragma code_page(65001)
+#include <winver.h>
+
+// Qt's Windows platform plugin uses IDI_ICON1 as the default window icon.
+IDI_ICON1 ICON "@SMTPRO_ICON_FILE@"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     @PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@,0
+PRODUCTVERSION  @PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName",      "@SMTPRO_PUBLISHER@"
+            VALUE "FileDescription",  "@SMTPRO_DISPLAY_NAME@ SMT 贴片机上位机软件"
+            VALUE "FileVersion",      "@PROJECT_VERSION@"
+            VALUE "InternalName",     "@SMTPRO_EXE_NAME@"
+            VALUE "OriginalFilename", "@SMTPRO_EXE_NAME@.exe"
+            VALUE "ProductName",      "@SMTPRO_DISPLAY_NAME@"
+            VALUE "ProductVersion",   "@PROJECT_VERSION@"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0804, 1200
+    END
+END
